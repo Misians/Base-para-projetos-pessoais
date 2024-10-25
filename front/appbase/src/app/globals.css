@@ -1,0 +1,638 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*--background: #ffffff;
+  --foreground: #171717;*/
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+ /*   --foreground: #ededed;*/
+ --primaryColor: #FEC701;
+  --hoverColor: #fcdd70;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: #1B2E35;
+  --bgColor: hsl(233, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+  --gradientOne: linear-gradient(90deg, rgba(26,177,190,1) 0%, rgba(1,203,97,1) 100%);
+  /* Font and typography*/
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+  }
+}
+
+body {
+  /*color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;*/
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.column img{
+  width: 300px;
+}
+.formDiv{
+  padding: 4%;
+}
+.imgDiv img{
+  /* padding: 10%; */
+}
+.twodivs{
+  background-color: rgb(247, 247, 247);
+  border-radius: 20px;
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  border: 1px solid #eaeaea;
+  box-shadow: 1px 1px 10px #eaeaea;
+  margin-top: 60px;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-bottom: 60px;
+}
+.Text{
+  color: var(--greyText);
+  align-self: center;
+}
+.left{
+  width: 50%;
+  padding: 20px;
+  /*background-color: aquamarine;*/
+  height: 100%;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* Estilo para telas menores (mobile) */
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+.comprarCr{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--inputColor);
+  
+  
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;gap: 10px;
+}
+.comprarCr h2{
+  font-size: 48;
+  color: rgb(26,177,190);
+  /* color: var(--gradientOne); */
+}
+.comprarCr h5{
+  font-size: 48;
+  font-weight: 400;
+  /* color: var(--gradientOne); */
+}
+.gradient1{
+  background-image: linear-gradient(90deg, rgba(26,177,190,1) 0%, rgba(1,203,97,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+.gradient2{
+  background-image: linear-gradient(90deg, rgba(255,199,1,1) 0%, rgba(215,163,86,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+.gradient3{
+  background-image: linear-gradient(90deg, rgba(165,51,255,1) 0%, rgba(253,55,210,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+.button-c{
+  position: relative;
+  bottom: 30px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0px 0px 5px 5px;
+  cursor: pointer;
+  border: none;
+  background: rgb(165,51,255);
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(165,51,255,1) 0%, rgba(253,55,210,1) 100%);
+}
+
+.button-a{
+  position: relative;
+  cursor: pointer;
+  bottom: 30px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+  color: white;
+  background: rgb(26,177,190);
+  background: linear-gradient(90deg, rgba(26,177,190,1) 0%, rgba(1,203,97,1) 100%);
+  font-weight: 600;
+}
+
+.button-b{
+  position: relative;
+  bottom: 30px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  
+  border-radius: 0px 0px 5px 5px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background: rgb(255,199,1);
+  background: linear-gradient(90deg, rgba(255,199,1,1) 0%, rgba(215,163,86,1) 100%);
+}
+.margin{
+  margin: 20px;
+}
+.telabusca{
+  display: flex;
+  background-color: var(--bgColor);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.telabusca h1{
+  font-size: 40px;
+}
+.busca button{
+  background-color: var(--bgColor) ;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--greyText);
+}
+.busca{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  text-align: center;
+}
+.squarebusca{
+  background-color: whitesmoke;
+  padding: 50px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px var(--greyText);
+}
+.submitform{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.squarebusca form{
+  flex-direction: row;
+  display: flex;
+  gap: 50px;
+}
+.busca input{
+  padding: 10px;
+  border-radius: 10px;
+  border: 0.5px solid #eaeaea;
+  width: 250px;
+}
+html {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+img, video {
+  height: auto;
+  width: 100%;
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  padding: 10px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 3px;
+  text-align: center;
+}
+.btn-create{
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  padding-left: 12px;
+  padding-right: 12px;
+
+  border-radius: 10px;
+}
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  background-color: rgb(255, 0, 0);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: var(--greyText);
+}
+
+
+.btn:hover {
+  color: var(--primaryColor);
+  background-color: var(--paleGreen);
+}
+
+.loginPage, .registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.loginPage .container, .registerPage .container {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+.loginPage .container .imgDiv, .registerPage .container .imgDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.loginPage .container .imgDiv img, .loginPage .container .imgDiv .footerDiv, .registerPage .container .imgDiv img, .registerPage .container .imgDiv .footerDiv {
+  position: absolute;
+}
+.loginPage .container .imgDiv img, .registerPage .container .imgDiv img {
+  /* height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+}
+.loginPage .container .imgDiv .textDiv, .registerPage .container .imgDiv .textDiv {
+  position: relative;
+}
+.loginPage .container .imgDiv .textDiv .title, .registerPage .container .imgDiv .textDiv .title {
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+}
+.loginPage .container .imgDiv .textDiv p, .registerPage .container .imgDiv .textDiv p {
+  color: var(--whiteColor);
+  padding-left: 1rem;
+  font-weight: 400;
+}
+.loginPage .container .imgDiv .footerDiv, .registerPage .container .imgDiv .footerDiv {
+  bottom: 10px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.248);
+  border-radius: 10px;
+  left: 10px;
+  right: 10px;
+  justify-content: space-between;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.loginPage .container .imgDiv .footerDiv .text, .registerPage .container .imgDiv .footerDiv .text {
+  color: var(--whiteColor);
+}
+.loginPage .container .imgDiv .footerDiv .btn, .registerPage .container .imgDiv .footerDiv .btn {
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+  border-radius: 10px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+.loginPage .container .imgDiv .footerDiv .btn:hover, .registerPage .container .imgDiv .footerDiv .btn:hover {
+  background-color: var(--hoverColor);
+  color: var(--blackColor);
+}
+.loginPage .container .formDiv, .registerPage .container .formDiv {
+  flex-basis: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateY(-1rem);
+}
+.loginPage .container .formDiv .headerDiv, .registerPage .container .formDiv .headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.loginPage .container .formDiv .headerDiv img, .registerPage .container .formDiv .headerDiv img {
+  width: 90px;
+  padding-bottom: 0.5rem;
+}
+.loginPage .container .formDiv .headerDiv h3, .registerPage .container .formDiv .headerDiv h3 {
+  font-size: 25px;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.buscas-type{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 150px;
+  background-color: #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+}
+.radio-group input[type="radio"] {
+  display: none;
+}
+.chassiProblema{
+  background-color: red;
+}
+.chassiBom{
+  background-color: rgb(94, 236, 94);
+}
+/* Estilo dos labels como botões de radio */
+.radio-group label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo quando o input de radio está checado */
+.radio-group input[type="radio"]:checked + label {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007BFF;
+}
+
+/* Estilo quando o label é focado */
+.radio-group input[type="radio"]:focus + label {
+  outline: none;
+  border-color: #0056b3;
+}
+
+/* Estilo quando o label é hover */
+.radio-group label:hover {
+  background-color: #f1f1f1;
+}
+
+.imageMarca{
+  display: flex;
+  
+  height: 100px;
+  width: 50px;
+}
+.squarebusca-type{
+  display: flex;
+  gap: 40px;
+  width: 80%;
+  overflow: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.loginPage .container .formDiv .form, .registerPage .container .formDiv .form {
+  gap: 1rem;
+}
+.loginPage .container .formDiv .form .inputDiv .icon, .registerPage .container .formDiv .form .inputDiv .icon {
+  color: var(--greyText);
+}
+.loginPage .container .formDiv .form .inputDiv input, .registerPage .container .formDiv .form .inputDiv input {
+  background-color: var(--inputColor);
+  outline: none;
+  border: none;
+  width: 200px;
+}
+.loginPage .container .formDiv .form .inputDiv label, .registerPage .container .formDiv .form .inputDiv label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem;
+  display: block;
+}
+.loginPage .container .formDiv .form .inputDiv .input, .registerPage .container .formDiv .form .inputDiv .input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--inputColor);
+  border-radius: 10px;
+}
+.loginPage .container .formDiv .form .btn, .registerPage .container .formDiv .form .btn {
+  padding: 0.8rem;
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--whiteColor);
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+.loginPage .container .formDiv .form .btn .icon, .registerPage .container .formDiv .form .btn .icon {
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+.loginPage .container .formDiv .form .btn:hover, .registerPage .container .formDiv .form .btn:hover {
+  background-color: var(--hoverColor);
+  color: var(--blackColor);
+}
+.loginPage .container .formDiv .form .btn:hover .icon, .registerPage .container .formDiv .form .btn:hover .icon {
+  color: var(--blackColor);
+  transform: translateX(5px);
+}
+.loginPage .container .formDiv .form .forgotPassword, .registerPage .container .formDiv .form .forgotPassword {
+  font-size: 13px;
+  color: var(--blackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+.loginPage .container .formDiv .form .forgotPassword a, .registerPage .container .formDiv .form .forgotPassword a {
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 1;
+}
+.loginPage .container .dashboard, .registerPage .container .dashboard {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+
+.loginPage .container .dashboard .dashboard-container, .registerPage .container .dashboard .dashboard-container {
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(194, 194, 194);
+}
+.button-Logout button{
+  background-color: var(--inputColor);
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 602px) {
+  .loginPage .container, .registerPage .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .container .imgDiv, .registerPage .container .imgDiv {
+    width: 100%;
+  }
+  .loginPage .container .imgDiv .textDiv .title, .registerPage .container .imgDiv .textDiv .title {
+    font-size: 20px;
+  }
+  .loginPage .container .imgDiv .textDiv p, .registerPage .container .imgDiv .textDiv p {
+    padding: 1rem;
+  }
+  .loginPage .container .imgDiv .footerDiv .text, .registerPage .container .imgDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container .imgDiv .footerDiv .btn, .registerPage .container .imgDiv .footerDiv .btn {
+  }
+  .loginPage .container .formDiv, .registerPage .container .formDiv {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+  .loginPage .container .formDiv .headerDiv, .registerPage .container .formDiv .headerDiv {
+    padding: 1rem 0;
+  }
+  .loginPage .container .formDiv .headerDiv img, .registerPage .container .formDiv .headerDiv img {
+    width: 40px;
+  }
+  .loginPage .container .formDiv .headerDiv h3, .registerPage .container .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .container .formDiv .form, .registerPage .container .formDiv .form {
+    gap: 0.5rem;
+  }
+  .loginPage .container .formDiv .form .inputDiv input, .registerPage .container .formDiv .form .inputDiv input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 678px) {
+  .loginPage .container, .registerPage .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .container .imgDiv .textDiv .title, .registerPage .container .imgDiv .textDiv .title {
+    font-size: 25px;
+  }
+  .loginPage .container .imgDiv .textDiv p, .registerPage .container .imgDiv .textDiv p {
+    padding: 1rem;
+  }
+  .loginPage .container .imgDiv .footerDiv .text, .registerPage .container .imgDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .container .imgDiv .footerDiv .btn, .registerPage .container .imgDiv .footerDiv .btn {
+  }
+  .loginPage .container .formDiv .headerDiv, .registerPage .container .formDiv .headerDiv {
+    padding: 1.5rem 0;
+  }
+  .loginPage .container .formDiv .headerDiv h3, .registerPage .container .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .container .formDiv .form .inputDiv input, .registerPage .container .formDiv .form .inputDiv input {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 927px) {
+  .loginPage .container, .registerPage .container {
+    width: 85%;
+  }
+  
+  .container-a {
+    display: flex;
+    flex-direction: column;
+  }
+  .tirareft{
+    margin: 0;
+    display: flex;
+    width: 100%;
+
+  }
+}
